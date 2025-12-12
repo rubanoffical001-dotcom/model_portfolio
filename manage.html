@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Projects | Ruban Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">RUBAN<span class="neon-text-blue">.</span> Admin</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Back to Portfolio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section style="padding-top: 150px;">
+        <div class="container">
+            <h2 class="section-title">Manage Projects</h2>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                <!-- Add New Project Form -->
+                <div>
+                    <div class="glass-card" style="padding: 30px;">
+                        <h3 style="margin-bottom: 20px; color: var(--neon-blue);">Add New Project</h3>
+                        <form id="add-project-form">
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Project
+                                    Title</label>
+                                <input type="text" id="p-title" required placeholder="e.g. My Awesome App">
+                            </div>
+                            <div class="form-group">
+                                <label
+                                    style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Description</label>
+                                <input type="text" id="p-desc" required placeholder="e.g. A web app for...">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 8px; color: var(--text-secondary);">Image
+                                    URL</label>
+                                <input type="url" id="p-img" required placeholder="https://...">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Add Project</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Existing Projects List -->
+                <div>
+                    <h3 style="margin-bottom: 20px; color: var(--text-primary);">Existing Projects</h3>
+                    <div id="admin-projects-list">
+                        <!-- Projects loaded via JS -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
